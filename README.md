@@ -275,6 +275,10 @@ Kubernetes pods (isolated) ───┘         │
   <img src="specturm analysis.png" alt="Spectrum Analysis Output" width="45%">
 </p>
 
+### 🎥 Demo Video
+
+▶️ **[Watch the full spoofing detection demo on GNU Radio](https://youtu.be/lPrOVfoNzmA)**
+
 ---
 
 ## 💥 Cyber Attacks — Failure & Recovery in Space
