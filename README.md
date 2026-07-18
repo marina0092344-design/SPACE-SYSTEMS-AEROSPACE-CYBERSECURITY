@@ -1,4 +1,3 @@
-
 # بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
 
 # 🛰️ Space Systems & Aerospace Cybersecurity
@@ -83,6 +82,10 @@ Because one cyber attack on a satellite can affect millions of people on Earth:
 | Banking | Transactions lose timing |
 | Emergency services | Lose location data |
 
+<p align="center">
+  <img src="Screenshots/ground_station_antenna.jpg" alt="Ground Station Antenna" width="500">
+</p>
+
 ---
 
 ## 🏗️ Satellite & Aerospace System Architecture
@@ -134,6 +137,11 @@ before acting                ground                          on every packet
 | **Network Level** | Ground stations run on standard IP networks · A hacked ground network can disrupt satellite operations | ViaSat 2022 — attackers entered via a misconfigured VPN device |
 | **Receiver Level** | Devices lock onto the strongest signal · Vulnerable firmware, poor validation | The receiver shows a wrong location but gives **no warning** |
 | **Operational Level** | Weak keys and passwords · Poor security configuration | One misconfiguration = full satellite system exposed to attacker |
+
+<p align="center">
+  <img src="Screenshots/vulnerability_signal_level.png" alt="Signal Level Vulnerability" width="45%">
+  <img src="Screenshots/vulnerability_network_level.png" alt="Network Level Vulnerability" width="45%">
+</p>
 
 ---
 
@@ -191,6 +199,10 @@ After spoofing:  Receiver locked onto FAKE signal (strong)
 | **Impact** | Ships lost navigation completely · No warning was given to anyone |
 | **Why It Matters** | GPS spoofing is a real threat · Space systems affect real-world safety |
 | **Key Lesson** | Use multiple satellite systems · Keep backup navigation ready |
+
+<p align="center">
+  <img src="Screenshots/black_sea_ships.jpg" alt="Ships affected by Black Sea GPS spoofing" width="500">
+</p>
 
 > Reference: [insidegnss.com](https://insidegnss.com/reports-of-mass-gps-spoofing-attack-in-the-black-sea-strengthen-calls-for-pntbackup/)
 
@@ -271,6 +283,21 @@ Kubernetes pods (isolated) ───┘         │
 | Real satellite signal | Visible but weaker on the spectrum |
 | Spoofed GPS signal | Dominant, stronger peak |
 
+<p align="center">
+  <img src="Screenshots/gnuradio_flowgraph.png" alt="GNU Radio Flowgraph" width="45%">
+  <img src="Screenshots/spoofing_spectrum_output.png" alt="Spectrum Analysis Output" width="45%">
+</p>
+
+### 🎥 Demo Video
+
+<p align="center">
+  <a href="https://youtu.be/YOUR-VIDEO-ID" target="_blank">
+    <img src="Screenshots/demo_video_thumbnail.png" alt="Watch the demo video" width="500">
+  </a>
+</p>
+
+*Click the image above to watch the full spoofing detection walkthrough on GNU Radio.*
+
 ---
 
 ## 💥 Cyber Attacks — Failure & Recovery in Space
@@ -328,18 +355,16 @@ Space_and_Aerospace_Cybersecurity/
 ├── presentation/
 │   └── Space_and_Aerospace_Cybersecurity.pdf
 │
-├── Screenshots/
-│   ├── spoofing_spectrum_output.png
-│   └── gnuradio_flowgraph.png
-│
-├── demo-video/
-│   └── demo_video_link.md
-│
-└── Code_Files/
-    ├── 01_install_gnuradio.md
-    ├── 02_spoofing_simulation.md
-    └── 03_signal_flowgraph.md
+└── Screenshots/
+    ├── ground_station_antenna.jpg
+    ├── vulnerability_signal_level.png
+    ├── vulnerability_network_level.png
+    ├── black_sea_ships.jpg
+    ├── gnuradio_flowgraph.png
+    ├── spoofing_spectrum_output.png
+    └── demo_video_thumbnail.png
 ```
 
----
+> 🎥 The demo video itself is **not stored in this repo** — it's uploaded to YouTube (unlisted or public) and linked above. This keeps the repo lightweight and lets the video play properly instead of just downloading.
 
+---
