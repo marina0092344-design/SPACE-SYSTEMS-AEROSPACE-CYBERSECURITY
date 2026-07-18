@@ -271,8 +271,8 @@ Kubernetes pods (isolated) ───┘         │
 | Spoofed GPS signal | Dominant, stronger peak |
 
 <p align="center">
-  <img src="Screenshots/gnuradio_flowgraph.png" alt="GNU Radio Flowgraph" width="45%">
-  <img src="Screenshots/spoofing_spectrum_output.png" alt="Spectrum Analysis Output" width="45%">
+  <img src="satellite signal  spoofing1.png" alt="GNU Radio Flowgraph" width="45%">
+  <img src="specturm analysis.png" alt="Spectrum Analysis Output" width="45%">
 </p>
 
 ---
@@ -332,9 +332,8 @@ Space_and_Aerospace_Cybersecurity/
 ├── presentation/
 │   └── Space_and_Aerospace_Cybersecurity.pdf
 │
-└── Screenshots/
-    ├── gnuradio_flowgraph.png
-    └── spoofing_spectrum_output.png
+├── satellite signal  spoofing1.png
+└── specturm analysis.png
 ```
 
 ---
