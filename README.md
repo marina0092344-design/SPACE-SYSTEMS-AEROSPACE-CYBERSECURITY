@@ -368,3 +368,9 @@ Space_and_Aerospace_Cybersecurity/
 > 🎥 The demo video itself is **not stored in this repo** — it's uploaded to YouTube (unlisted or public) and linked above. This keeps the repo lightweight and lets the video play properly instead of just downloading.
 
 ---
+
+**Madiha Muhammad Buksh**
+Cybersecurity Student | Aspiring SOC Analyst | Pakistan
+Diploma in Cloud Cyber Security | RQF Level 3 | Al-Nafi International College
+
+*⚠️ For educational purposes only. All simulations conducted in an isolated virtual environment. No real GNSS signals were transmitted or interfered with.*
