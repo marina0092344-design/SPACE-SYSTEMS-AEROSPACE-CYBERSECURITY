@@ -336,6 +336,11 @@ Space_and_Aerospace_Cybersecurity/
     ├── gnuradio_flowgraph.png
     └── spoofing_spectrum_output.png
 ```
-⚠️ For educational purposes only. All simulations conducted in an isolated virtual environment. No real GPS signals were transmitted or interfered with.
+
 ---
 
+**Madiha Muhammad Buksh**
+Cybersecurity Student | Aspiring SOC Analyst | Pakistan
+Diploma in Cloud Cyber Security | RQF Level 3 | Al-Nafi International College
+
+*⚠️ For educational purposes only. All simulations conducted in an isolated virtual environment. No real GPS signals were transmitted or interfered with.*
