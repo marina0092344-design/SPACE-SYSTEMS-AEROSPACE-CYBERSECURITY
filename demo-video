@@ -1,8 +1,1 @@
 
-# Demo Video — Satellite Signal Spoofing Detection
-
-   Tool used: GNU Radio Companion on Kali Linux
-
-   This video demonstrates the live spoofing simulation, where a real satellite signal (1 kHz) is combined with a spoofed GPS signal (1.2 kHz), and the spectrum analysis output shows the spoofed signal overpowering the real one.
-
-   Watch here: https://youtu.be/lPrOVfoNzmA
