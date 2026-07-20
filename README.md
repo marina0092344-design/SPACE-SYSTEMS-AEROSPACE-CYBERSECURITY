@@ -271,13 +271,13 @@ Kubernetes pods (isolated) ───┘         │
 | Spoofed GPS signal | Dominant, stronger peak |
 
 <p align="center">
-  <img src="satellite signal  spoofing1.png" alt="GNU Radio Flowgraph" width="45%">
-  <img src="specturm analysis.png" alt="Spectrum Analysis Output" width="45%">
+  <img src="Screenshots/satellite signal spoofing1.png" alt="GNU Radio Flowgraph" width="45%">
+  <img src="Screenshots/specturm analysis.png" alt="Spectrum Analysis Output" width="45%">
 </p>
 
 ### 🎥 Demo Video
 
-▶️ **[Watch the full spoofing detection demo on GNU Radio](https://youtu.be/lPrOVfoNzmA)**
+▶️ **[Watch the full spoofing detection demo on GNU Radio](demo-video/Demo_Video_Link.md)**
 
 ---
 
@@ -336,12 +336,21 @@ Space_and_Aerospace_Cybersecurity/
 ├── presentation/
 │   └── Space_and_Aerospace_Cybersecurity.pdf
 │
-├── satellite signal  spoofing1.png
-└── specturm analysis.png
+├── Screenshots/
+│   ├── satellite signal spoofing1.png
+│   └── specturm analysis.png
+│
+├── Code_Files/
+│   └── GNU_Radio_Spoofing_Simulation.md
+│
+└── demo-video/
+    └── Demo_Video_Link.md
 ```
 
 ---
 
-
+**Madiha Muhammad Buksh**
+Cybersecurity Student | Aspiring SOC Analyst | Pakistan
+Diploma in Cloud Cyber Security | RQF Level 3 | Al-Nafi International College
 
 *⚠️ For educational purposes only. All simulations conducted in an isolated virtual environment. No real GPS signals were transmitted or interfered with.*
