@@ -1,39 +1,107 @@
-###GPS Spoofing Signal Simulation###
-Space Systems & Aerospace Cybersecurity — GNU Radio on Kali Linux
 
-0. Set Sample Rate Variable
-Action: Add Variable block
-Settings:
-ID = samp_rate    Value = 32k
-Purpose: Defines global sample rate used across all blocks
+# GPS Spoofing Signal Simulation
 
-1. Create Real Satellite Signal
-Action: Add Signal Source block
-Settings:
-Frequency = 1k    Waveform = Sine    Sample Rate = 32k    Amplitude = 1
-Purpose: Represents the legitimate satellite signal
+**Space Systems & Aerospace Cybersecurity — GNU Radio Companion on Kali Linux**
 
-2. Create Spoofed GPS Signal
-Action: Add second Signal Source block
-Settings:
-Frequency = 1.2k    Waveform = Sine    Sample Rate = 32k    Amplitude = 1
-Purpose: Simulates the fake GPS signal sent by an attacker
+## Purpose
 
-3. Combine Both Signals
-Action: Add Add block
-Purpose: Merges real and spoofed signals together, simulating a spoofing attack
+This demonstration uses GNU Radio Companion to create and combine two simulated signals. It helps explain the basic concept of GPS spoofing and how signals can be viewed in a frequency spectrum.
 
-4. Visualize Spectrum
-Action: Add QT GUI Frequency Sink
-Settings:
-FFT Size = 1024    Center Frequency (Hz) = 0    Bandwidth (Hz) = 32k
-Purpose: Displays frequency spectrum comparing real and spoofed signals
+This is a simplified educational simulation. The two tones are models only; they are not real GPS signals.
 
-_________________________________________
-###Output Analysis###
-Spoofed GPS signal detected at 6.64 kHz, -35.68 dB
-Real satellite signal is significantly weaker and spread across the spectrum
-Sharp, stronger peak confirms the spoofed signal overpowers the real one
+## 0. Set the Sample Rate Variable
 
-Tool used: GNU Radio Companion on Kali Linux
-Environment: Isolated virtual machine — no real GPS signals were transmitted or interfered with
+**Action:** Add a Variable block.
+
+**Settings:**
+- ID: `samp_rate`
+- Value: `32k`
+
+**Purpose:**
+
+Defines the sample rate used by the signal-processing blocks.
+
+## 1. Create the Genuine Signal Model
+
+**Action:** Add a Signal Source block.
+
+**Settings:**
+- Frequency: `1k`
+- Waveform: Sine
+- Sample Rate: `samp_rate`
+- Amplitude: `1`
+
+**Purpose:**
+
+Represents a simplified model of a genuine satellite signal. This is a test tone, not an actual GPS signal.
+
+## 2. Create the Fake Signal Model
+
+**Action:** Add a second Signal Source block.
+
+**Settings:**
+- Frequency: `1.2k`
+- Waveform: Sine
+- Sample Rate: `samp_rate`
+- Amplitude: `1`
+
+**Purpose:**
+
+Represents a simulated fake signal for explaining the concept of GPS spoofing. It does not contain real GPS navigation data.
+
+## 3. Combine Both Signals
+
+**Action:** Add an Add block.
+
+**Connections:**
+- Connect the first Signal Source to one input.
+- Connect the second Signal Source to the other input.
+
+**Purpose:**
+
+Combines both simulated tones into one output signal so their frequency components can be observed together.
+
+## 4. Visualize the Frequency Spectrum
+
+**Action:** Add a QT GUI Frequency Sink block.
+
+**Settings:**
+- FFT Size: `1024`
+- Center Frequency (Hz): `0`
+- Bandwidth (Hz): `32k`
+
+**Connection:**
+
+Connect the output of the Add block to the QT GUI Frequency Sink.
+
+**Purpose:**
+
+Displays the frequency spectrum of the combined signal and allows us to observe the two simulated tones.
+
+---
+
+## Output Analysis
+
+- The first signal source generates a tone at **1 kHz**.
+- The second signal source generates a tone at **1.2 kHz**.
+- The Add block combines both tones.
+- The frequency spectrum should show peaks near the two configured frequencies, depending on the display settings and FFT resolution.
+- Both signals have an amplitude of `1`, so their peaks should have similar heights under the same display conditions.
+- A peak in the spectrum alone does not prove that a GPS spoofing attack has occurred.
+- This configuration does not demonstrate that the fake signal overpowers the genuine signal because both signals have the same amplitude.
+
+**Important:** Do not report a spoofing detection at 6.64 kHz or −35.68 dB unless separate, verified measurements support those values.
+
+## Tool and Environment
+
+- **Tool:** GNU Radio Companion
+- **Operating System:** Kali Linux
+- **Environment:** Isolated virtual machine
+
+## Safety and Scope
+
+This is an educational signal simulation. It does not generate or transmit an actual GPS signal and does not interfere with real satellite navigation services.
+
+## Learning Outcome
+
+This demonstration shows how to generate two test tones, combine them, and observe their frequency components using GNU Radio. It introduces signal analysis and helps explain why receiving a signal is not the same as verifying that the signal is genuine.
