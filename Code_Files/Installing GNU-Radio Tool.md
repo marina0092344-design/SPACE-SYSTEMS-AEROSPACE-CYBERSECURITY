@@ -1,4 +1,3 @@
-
 # Installing GNU Radio on Kali Linux
 
 **Space Systems & Aerospace Cybersecurity**
@@ -77,8 +76,8 @@ These blocks are used to generate two test tones, combine them, and display thei
 For the demonstration in this project, use the following settings:
 
 - Sample rate: `32k`
-- First signal frequency: `1k`
-- Second signal frequency: `1.2k`
+- Tone 1 frequency (genuine signal model): `1k`
+- Tone 2 frequency (fake signal model): `1.2k`
 - Amplitude of both signals: `1`
 - FFT size: `1024`
 
