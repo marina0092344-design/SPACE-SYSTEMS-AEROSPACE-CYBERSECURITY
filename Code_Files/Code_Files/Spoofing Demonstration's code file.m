@@ -1,107 +1,94 @@
+# Installing GNU Radio on Kali Linux
 
-# GPS Spoofing Signal Simulation
-
-**Space Systems & Aerospace Cybersecurity — GNU Radio Companion on Kali Linux**
+**Space Systems & Aerospace Cybersecurity**
 
 ## Purpose
 
-This demonstration uses GNU Radio Companion to create and combine two simulated signals. It helps explain the basic concept of GPS spoofing and how signals can be viewed in a frequency spectrum.
+This guide explains how to install GNU Radio and launch GNU Radio Companion on Kali Linux. GNU Radio is used in this project to build a simple signal simulation for the space systems and aerospace cybersecurity presentation.
 
-This is a simplified educational simulation. The two tones are models only; they are not real GPS signals.
+## 1. Update System Package Lists
 
-## 0. Set the Sample Rate Variable
+**Command:**
 
-**Action:** Add a Variable block.
-
-**Settings:**
-- ID: `samp_rate`
-- Value: `32k`
+```bash
+sudo apt update
+```
 
 **Purpose:**
+- Refreshes the local package lists.
+- Checks the available package information from the configured repositories.
+- Helps the system find available software versions.
 
-Defines the sample rate used by the signal-processing blocks.
+## 2. Upgrade Installed Packages
 
-## 1. Create the Genuine Signal Model
+**Command:**
 
-**Action:** Add a Signal Source block.
-
-**Settings:**
-- Frequency: `1k`
-- Waveform: Sine
-- Sample Rate: `samp_rate`
-- Amplitude: `1`
-
-**Purpose:**
-
-Represents a simplified model of a genuine satellite signal. This is a test tone, not an actual GPS signal.
-
-## 2. Create the Fake Signal Model
-
-**Action:** Add a second Signal Source block.
-
-**Settings:**
-- Frequency: `1.2k`
-- Waveform: Sine
-- Sample Rate: `samp_rate`
-- Amplitude: `1`
+```bash
+sudo apt upgrade
+```
 
 **Purpose:**
+- Installs available upgrades for existing packages.
+- Helps keep the system updated.
+- May take some time, depending on the number of available updates.
 
-Represents a simulated fake signal for explaining the concept of GPS spoofing. It does not contain real GPS navigation data.
+Review the proposed changes and follow the terminal prompts.
 
-## 3. Combine Both Signals
+## 3. Install GNU Radio
 
-**Action:** Add an Add block.
+**Command:**
 
-**Connections:**
-- Connect the first Signal Source to one input.
-- Connect the second Signal Source to the other input.
-
-**Purpose:**
-
-Combines both simulated tones into one output signal so their frequency components can be observed together.
-
-## 4. Visualize the Frequency Spectrum
-
-**Action:** Add a QT GUI Frequency Sink block.
-
-**Settings:**
-- FFT Size: `1024`
-- Center Frequency (Hz): `0`
-- Bandwidth (Hz): `32k`
-
-**Connection:**
-
-Connect the output of the Add block to the QT GUI Frequency Sink.
+```bash
+sudo apt install gnuradio
+```
 
 **Purpose:**
+- Installs GNU Radio and its required packages.
+- Provides tools for creating and processing simulated signals.
+- Allows users to build signal-processing flowgraphs.
 
-Displays the frequency spectrum of the combined signal and allows us to observe the two simulated tones.
+## 4. Launch GNU Radio Companion
 
----
+**Command:**
 
-## Output Analysis
+```bash
+gnuradio-companion
+```
 
-- The first signal source generates a tone at **1 kHz**.
-- The second signal source generates a tone at **1.2 kHz**.
-- The Add block combines both tones.
-- The frequency spectrum should show peaks near the two configured frequencies, depending on the display settings and FFT resolution.
-- Both signals have an amplitude of `1`, so their peaks should have similar heights under the same display conditions.
-- A peak in the spectrum alone does not prove that a GPS spoofing attack has occurred.
-- This configuration does not demonstrate that the fake signal overpowers the genuine signal because both signals have the same amplitude.
+**Purpose:**
+- Opens the GNU Radio Companion graphical interface.
+- Allows users to add, configure, and connect blocks.
+- Makes it possible to create and run signal-processing flowgraphs.
 
-**Important:** Do not report a spoofing detection at 6.64 kHz or −35.68 dB unless separate, verified measurements support those values.
+## 5. Check the Required Blocks
 
-## Tool and Environment
+After GNU Radio Companion opens, check that the following blocks are available for the simulation:
 
-- **Tool:** GNU Radio Companion
-- **Operating System:** Kali Linux
-- **Environment:** Isolated virtual machine
+- Variable
+- Signal Source
+- Add
+- QT GUI Frequency Sink
+
+These blocks are used to generate two test tones, combine them, and display their frequency spectrum.
+
+## 6. Prepare the Simulation
+
+For the demonstration in this project, use the following settings:
+
+- Sample rate: `32k`
+- Tone 1 frequency (genuine signal model): `1k`
+- Tone 2 frequency (fake signal model): `1.2k`
+- Amplitude of both signals: `1`
+- FFT size: `1024`
+
+Connect both Signal Source blocks to the Add block, then connect the Add block to the QT GUI Frequency Sink.
+
+The resulting spectrum allows the two simulated tones to be observed.
 
 ## Safety and Scope
 
-This is an educational signal simulation. It does not generate or transmit an actual GPS signal and does not interfere with real satellite navigation services.
+Kali Linux is used as the environment for this educational simulation. The demonstration uses locally generated test tones and does not transmit real GPS signals or interfere with satellite navigation services.
 
-## Learning Outcome
+## Conclusion
 
-This demonstration shows how to generate two test tones, combine them, and observe their frequency components using GNU Radio. It introduces signal analysis and helps explain why receiving a signal is not the same as verifying that the signal is genuine.
+GNU Radio Companion provides a graphical way to create and study signal-processing flowgraphs. In this project, it is used to demonstrate signal generation, signal combination, and frequency-spectrum analysis as part of space systems and aerospace cybersecurity.
