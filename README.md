@@ -101,7 +101,9 @@ Ground operator prepares and protects a command → **uplink** → satellite che
 | **Why it matters** | GPS spoofing is a real threat. Space systems affect real-world safety |
 | **Key lesson** | Cross-check with independent navigation. Keep backup navigation ready |
 
-> Reference: [Inside GNSS — Black Sea spoofing report](https://insidegnss.com/reports-of-mass-gps-spoofing-attack-in-the-black-sea-strengthen-calls-for-pnt-backup/)
+**Reference:** [Inside GNSS — Black Sea spoofing report](https://insidegnss.com/reports-of-mass-gps-spoofing-attack-in-the-black-sea-strengthen-calls-for-pnt-backup/)
+
+(Link: https://insidegnss.com/reports-of-mass-gps-spoofing-attack-in-the-black-sea-strengthen-calls-for-pnt-backup/)
 
 ---
 
@@ -156,7 +158,13 @@ Tone 1 (1 kHz) = genuine signal model. Tone 2 (1.2 kHz) = fake signal model. Bot
 [Signal Source 1.2 kHz]┘
 ```
 
-[![GNU Radio Flowgraph](</marina0092344-design/SPACE-SYSTEMS-AEROSPACE-CYBERSECURITY/raw/main/Screenshots/satellite signal spoofing1.png>)](</marina0092344-design/SPACE-SYSTEMS-AEROSPACE-CYBERSECURITY/blob/main/Screenshots/satellite signal  spoofing1.png>) [![Spectrum Analysis Output](https://github.com/marina0092344-design/SPACE-SYSTEMS-AEROSPACE-CYBERSECURITY/raw/main/Screenshots/specturm analysis.png)](</marina0092344-design/SPACE-SYSTEMS-AEROSPACE-CYBERSECURITY/blob/main/Screenshots/specturm analysis.png>)
+**Flowgraph (GNU Radio Companion):**
+
+[![GNU Radio Flowgraph](https://raw.githubusercontent.com/marina0092344-design/SPACE-SYSTEMS-AEROSPACE-CYBERSECURITY/main/Screenshots/Spoofing%20samulation.png)](https://github.com/marina0092344-design/SPACE-SYSTEMS-AEROSPACE-CYBERSECURITY/blob/main/Screenshots/Spoofing%20samulation.png)
+
+**Spectrum output:**
+
+[![Spectrum Analysis Output](https://raw.githubusercontent.com/marina0092344-design/SPACE-SYSTEMS-AEROSPACE-CYBERSECURITY/main/Screenshots/Specturm%20analysis.png)](https://github.com/marina0092344-design/SPACE-SYSTEMS-AEROSPACE-CYBERSECURITY/blob/main/Screenshots/Specturm%20analysis.png)
 
 **Note:** The tones are teaching models, not real GPS signals. A peak alone does not prove spoofing.
 
